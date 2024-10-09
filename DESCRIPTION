@@ -1,0 +1,31 @@
+Package: pilot
+Type: Package
+Title: Template to be used for Making New Registries at Rapportekt
+Version: 1.0.0
+Authors@R: c(
+    person(given = "Arnfinn Hykkerud",
+           family = "Steindal",
+           role = c("aut", "cre"),
+           email = "arnfinn.steindal@gmail.com",
+           comment = c(ORCID = "0000-0002-4088-7860"))
+           )
+Maintainer: Arnfinn Hykkerud Steindal <arnfinn.steindal@gmail.com>
+Description: Pilot-rapporteket.
+Depends:
+  R (>= 4.1.0)
+Imports:
+  DT,
+  magrittr,
+  rapbase,
+  shiny,
+  shinyalert
+Remotes:
+  Rapporteket/rapbase
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+URL: http://github.com/Rapporteket/pilot
+BugReports: http://github.com/Rapporteket/pilot/issues
+Suggests: 
+    testthat

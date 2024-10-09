@@ -1,0 +1,1 @@
+pilot er en enkelt utgangspunkt for etablering og utvikling av resultattjenester for kvalitetsregistre på Rapporteket.
