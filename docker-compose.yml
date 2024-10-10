@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   app:
-    image: some_image_name
+    image: rapporteket/pilot:main
     ports:
       - 3838:3838
 

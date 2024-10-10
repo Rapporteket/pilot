@@ -6,6 +6,7 @@
 ^LICENSE\.md$
 ^Rprofile.site$
 ^Dockerfile$
+^docker-compose\.yml$
 ^\.lintr$
 ^\.github$
 ^renovate.json$
