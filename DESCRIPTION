@@ -1,7 +1,7 @@
 Package: pilot
 Type: Package
-Title: Template to be used for Making New Registries at Rapportekt
-Version: 1.0.0
+Title: Test-rapportek for NHN
+Version: 1.0.1.9000
 Authors@R: c(
     person(given = "Arnfinn Hykkerud",
            family = "Steindal",
@@ -20,7 +20,7 @@ Imports:
   shiny,
   shinyalert
 Remotes:
-  Rapporteket/rapbase
+  Rapporteket/rapbase@falktest
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
