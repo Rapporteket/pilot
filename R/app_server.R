@@ -9,6 +9,55 @@
 
 app_server <- function(input, output, session) {
 
+  user <- rapbase::navbarWidgetServer2(
+    "rapadm-widget",
+    orgName = "RapAdm",
+    caller = packageName()
+  )
+
+  # Environment
+  output$user <- shiny::renderText({
+    paste("rapbase::getUserName(session):",
+          user$name())
+  })
+  output$group <- shiny::renderText({
+    paste("rapbase::getUserGroups(session):",
+          user$group())
+  })
+  output$resh_id <- shiny::renderText({
+    paste("rapbase::getUserReshId(session):",
+          user$org())
+  })
+  output$role <- shiny::renderText({
+    paste("rapbase::getUserRole(session):",
+          user$role())
+  })
+  output$email <- shiny::renderText({
+    paste("rapbase::getUserEmail(session):",
+          user$name())
+  })
+  output$full_name <- shiny::renderText({
+    paste("rapbase::getUserFullName(session):",
+          user$name())
+  })
+  output$phone <- shiny::renderText({
+    paste("rapbase::getUserPhone(session):",
+          user$phone())
+  })
+  output$instance <- shiny::renderText({
+    Sys.getenv("R_RAP_INSTANCE")
+  })
+  output$config_path <- shiny::renderText({
+    Sys.getenv("R_RAP_CONFIG_PATH")
+  })
+  output$sp_usergroups <- shiny::renderText({
+    paste("Sys.getenv('SHINYPROXY_USERGROUPS'):",
+          Sys.getenv("SHINYPROXY_USERGROUPS"))
+  })
+  output$locale <- shiny::renderText({
+    Sys.getlocale()
+  })
+
   # Last inn data
   regData <- getFakeRegData()
 
