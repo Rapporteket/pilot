@@ -26,11 +26,15 @@ app_ui <- function() {
         shiny::mainPanel(
           width = 12,
           shiny::htmlOutput("veiledning", inline = TRUE),
-          rapbase::appNavbarUserWidget(
-            user = shiny::uiOutput("appUserName"),
-            organization = shiny::uiOutput("appOrgName"),
-            addUserInfo = TRUE
-          )
+          if (Sys.getenv("R_RAP_INSTANCE") %in% c("DEV", "TEST", "QA", "PRODUCTION", "QAC", "PRODUCTIONC")) {
+            rapbase::navbarWidgetInput("navbar-widget", selectOrganization = TRUE)
+          } else {
+            rapbase::appNavbarUserWidget(
+              user = shiny::uiOutput("appUserName"),
+              organization = shiny::uiOutput("appOrgName"),
+              addUserInfo = TRUE
+            )
+          },
         )
       ),
       shiny::tabPanel(

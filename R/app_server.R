@@ -10,8 +10,8 @@
 app_server <- function(input, output, session) {
 
   user <- rapbase::navbarWidgetServer2(
-    "rapadm-widget",
-    orgName = "RapAdm",
+    "navbar-widget",
+    orgName = "pilot",
     caller = packageName()
   )
 
