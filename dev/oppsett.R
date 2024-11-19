@@ -1,18 +1,14 @@
-##############################
-## Kjøring på mobilt kontor ##
-##############################
+####################
+## Kjøring lokalt ##
+####################
 
 devtools::install("../rapbase/.")
 devtools::install(upgrade = FALSE, dependencies = FALSE)
 
 source("dev/sysSetenv.R")
-logger::log_threshold(level = "INFO")
-logger::log_messages()
-logger::log_errors()
-logger::log_warnings()
-logger::formatter_json()
-logger::log_threshold()
-logger::log_layout(logger::layout_json())
+# Hvis mobilt kontor
+# Sys.setenv(MYSQL_HOST="localhost")
+
 pilot::run_app()
 
 ######################

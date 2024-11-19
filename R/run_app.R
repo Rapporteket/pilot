@@ -4,5 +4,6 @@
 #' @export
 
 run_app <- function() {
+  logger_setup()
   shiny::shinyApp(ui = app_ui, server = app_server)
 }
